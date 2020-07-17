@@ -68,12 +68,16 @@ namespace MvvmCross.Platforms.Android.Views
         {
             await setup.EnsureInitialized().ConfigureAwait(false);
 
+            await RunAppStar(_bundle).ConfigureAwait(false);
+        }
+
+        protected virtual async ValueTask RunAppStar(Bundle? bundle)
+        {
             if (Mvx.IoCProvider.TryResolve(out IMvxAppStart startup) && !startup.IsStarted)
             {
-                await startup.Start(GetAppStartHint(null)).ConfigureAwait(false);
+                await startup.Start(GetAppStartHint(bundle)).ConfigureAwait(false);
             }
-
-            base.Finish();
+            Finish();
         }
 
         protected override void OnPause()

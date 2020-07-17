@@ -26,10 +26,10 @@ namespace Playground.Forms.Droid
         {
         }
 
-        protected override Task RunAppStartAsync(Bundle bundle)
+        protected override ValueTask RunAppStar(Bundle? bundle)
         {
             StartActivity(typeof(MainActivity));
-            return Task.CompletedTask;
+            return new ValueTask();
         }
     }
 }
