@@ -1,12 +1,12 @@
-// Licensed to the .NET Foundation under one or more agreements.
+﻿// Licensed to the .NET Foundation under one or more agreements.
 // The .NET Foundation licenses this file to you under the MS-PL license.
 // See the LICENSE file in the project root for more information.
 
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Data;
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Data;
 using MvvmCross.Binding;
 using MvvmCross.Binding.Bindings;
 
@@ -47,7 +47,7 @@ namespace MvvmCross.Platforms.Uap.Binding.MvxBinding
             attachedObject.SetValue(BindingsListProperty, newList);
 
             // create a binding watcher for the list
-            var binding = new Windows.UI.Xaml.Data.Binding();
+            var binding = new Microsoft.UI.Xaml.Data.Binding();
 
             bool attached = false;
             Action attachAction = () =>

@@ -1,12 +1,12 @@
-// Licensed to the .NET Foundation under one or more agreements.
+﻿// Licensed to the .NET Foundation under one or more agreements.
 // The .NET Foundation licenses this file to you under the MS-PL license.
 // See the LICENSE file in the project root for more information.
 
 using System;
 using System.Collections.Generic;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Media;
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Data;
+using Microsoft.UI.Xaml.Media;
 using MvvmCross.Converters;
 using MvvmCross.Logging;
 using MvvmCross.Binding;
@@ -41,7 +41,7 @@ namespace MvvmCross.Platforms.Uap.Binding
                 return;
             }
 
-            var newBinding = new Windows.UI.Xaml.Data.Binding
+            var newBinding = new Microsoft.UI.Xaml.Data.Binding
             {
                 Path = new PropertyPath(sourceStep.SourcePropertyPath),
                 Mode = ConvertMode(bindingDescription.Mode, property?.PropertyType ?? typeof(object)),

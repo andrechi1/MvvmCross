@@ -4,8 +4,8 @@
 
 using System;
 using System.Linq;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Media;
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Media;
 using MvvmCross.Platforms.Uap.Presenters.Attributes;
 using MvvmCross.ViewModels;
 

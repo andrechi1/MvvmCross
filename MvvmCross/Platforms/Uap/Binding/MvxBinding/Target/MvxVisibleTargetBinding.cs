@@ -3,7 +3,7 @@
 // See the LICENSE file in the project root for more information.
 
 using System;
-using Windows.UI.Xaml;
+using Microsoft.UI.Xaml;
 using MvvmCross.Binding;
 
 namespace MvvmCross.Platforms.Uap.Binding.MvxBinding.Target

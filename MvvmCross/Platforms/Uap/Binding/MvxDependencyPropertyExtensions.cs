@@ -4,7 +4,7 @@
 
 using System;
 using System.Reflection;
-using Windows.UI.Xaml;
+using Microsoft.UI.Xaml;
 
 namespace MvvmCross.Platforms.Uap.Binding
 {

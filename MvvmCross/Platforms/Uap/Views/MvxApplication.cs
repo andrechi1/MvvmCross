@@ -10,9 +10,9 @@ using MvvmCross.Platforms.Uap.Views.Suspension;
 using MvvmCross.ViewModels;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Navigation;
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Navigation;
 
 namespace MvvmCross.Platforms.Uap.Views
 {
@@ -36,16 +36,16 @@ namespace MvvmCross.Platforms.Uap.Views
         /// will be used such as when the application is launched to open a specific file.
         /// </summary>
         /// <param name="activationArgs">Details about the launch request and process.</param>
-        protected override void OnLaunched(LaunchActivatedEventArgs activationArgs)
+        protected override void OnLaunched(Microsoft.UI.Xaml.LaunchActivatedEventArgs activationArgs)
         {
             base.OnLaunched(activationArgs);
-            ActivationArguments = activationArgs;
+            ActivationArguments = activationArgs.UWPLaunchActivatedEventArgs;
 
-            var rootFrame = InitializeFrame(activationArgs);
+            var rootFrame = InitializeFrame(ActivationArguments);
 
-            if (activationArgs.PrelaunchActivated == false)
+            if (activationArgs.UWPLaunchActivatedEventArgs.PrelaunchActivated == false)
             {
-                RunAppStart(activationArgs);
+                RunAppStart(ActivationArguments);
             }
 
             Window.Current.Activate();

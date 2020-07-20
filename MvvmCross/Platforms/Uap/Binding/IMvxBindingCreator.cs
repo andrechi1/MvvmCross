@@ -4,7 +4,7 @@
 
 using System;
 using System.Collections.Generic;
-using Windows.UI.Xaml;
+using Microsoft.UI.Xaml;
 using MvvmCross.Binding.Bindings;
 
 namespace MvvmCross.Platforms.Uap.Binding

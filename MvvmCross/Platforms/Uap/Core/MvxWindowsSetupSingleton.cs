@@ -5,7 +5,7 @@
 using MvvmCross.Core;
 using MvvmCross.Platforms.Uap.Views;
 using Windows.ApplicationModel.Activation;
-using Windows.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Controls;
 
 namespace MvvmCross.Platforms.Uap.Core
 {

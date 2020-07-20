@@ -17,7 +17,7 @@ using MvvmCross.Platforms.Uap.Views.Suspension;
 using MvvmCross.ViewModels;
 using MvvmCross.Views;
 using Windows.ApplicationModel.Activation;
-using Windows.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Controls;
 using MvvmCross.Binding;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Binding.Bindings.Target.Construction;

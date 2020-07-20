@@ -10,7 +10,7 @@ using MvvmCross.Base;
 using MvvmCross.Core;
 using MvvmCross.Binding;
 using MvvmCross.Binding.Bindings;
-using Windows.UI.Xaml;
+using Microsoft.UI.Xaml;
 
 namespace MvvmCross.Platforms.Uap.Binding
 {

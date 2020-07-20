@@ -4,7 +4,7 @@
 
 using System;
 using Windows.UI.Core;
-using Windows.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Controls;
 using MvvmCross.Exceptions;
 using MvvmCross.Logging;
 using MvvmCross.Navigation;
@@ -15,8 +15,8 @@ using MvvmCross.Presenters;
 using MvvmCross.Views;
 using MvvmCross.Presenters.Attributes;
 using System.Threading.Tasks;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml;
+using Microsoft.UI.Xaml.Media;
+using Microsoft.UI.Xaml;
 using System.Linq;
 
 namespace MvvmCross.Platforms.Uap.Presenters

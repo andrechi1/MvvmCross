@@ -9,9 +9,9 @@ using MvvmCross.Platforms.Uap.Views.Suspension;
 using MvvmCross.ViewModels;
 using MvvmCross.Views;
 using Windows.UI.Core;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Navigation;
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Navigation;
 
 namespace MvvmCross.Platforms.Uap.Views
 {

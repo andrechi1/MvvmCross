@@ -4,8 +4,8 @@
 
 using System;
 using System.Globalization;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Data;
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Data;
 using MvvmCross.Converters;
 using MvvmCross.Logging;
 

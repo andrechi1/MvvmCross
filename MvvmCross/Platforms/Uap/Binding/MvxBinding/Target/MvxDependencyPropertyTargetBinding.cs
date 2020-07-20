@@ -1,10 +1,10 @@
-// Licensed to the .NET Foundation under one or more agreements.
+﻿// Licensed to the .NET Foundation under one or more agreements.
 // The .NET Foundation licenses this file to you under the MS-PL license.
 // See the LICENSE file in the project root for more information.
 
 using System;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Media;
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Media;
 using MvvmCross.Binding;
 using MvvmCross.Binding.Bindings.Target;
 using MvvmCross.Binding.Extensions;
@@ -40,7 +40,7 @@ namespace MvvmCross.Platforms.Uap.Binding.MvxBinding.Target
             if (frameworkElement == null)
                 return;
 
-            var listenerBinding = new Windows.UI.Xaml.Data.Binding()
+            var listenerBinding = new Microsoft.UI.Xaml.Data.Binding()
             {
                 Path = new PropertyPath(_targetName),
                 Source = frameworkElement
