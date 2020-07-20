@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!--<TargetFrameworks>netstandard2.0;net5.0</TargetFrameworks>-->
+    <TargetFrameworks>net5.0</TargetFrameworks>
+    <TargetPlatformVersion>10.0.18362.0</TargetPlatformVersion>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <AssemblyName>MvvmCross.Platforms.Color.WinRT</AssemblyName>
+    <RootNamespace>MvvmCross.Platforms.Color.Uap</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\Color\Platforms\Uap\**\*.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\MvvmCross.WinRT\MvvmCross.Platforms.WinRT.csproj" />
+    <ProjectReference Include="..\Color\MvvmCross.Plugin.Color.csproj" />
+  </ItemGroup>
+
+</Project>
