@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.iOS.Sdk">
+
+  <PropertyGroup>
+    <!--<TargetFrameworks>netstandard2.0;net5.0</TargetFrameworks>-->
+    <TargetFramework>net5.0</TargetFramework>
+    <RuntimeIdentifier>ios-x64</RuntimeIdentifier>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <AssemblyName>MvvmCross.Platforms.Color.WinRT</AssemblyName>
+    <RootNamespace>MvvmCross.Platforms.Color.Uap</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\Color\Platforms\Ios\**\*.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Color\MvvmCross.Plugin.Color.csproj" />
+  </ItemGroup>
+
+</Project>

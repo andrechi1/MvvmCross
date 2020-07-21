@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.iOS.Sdk">
+
+  <PropertyGroup>
+    <!--<TargetFramework>net5.0-ios13.0</TargetFramework>-->
+    <TargetFrameworks>net5.0</TargetFrameworks>
+    <RuntimeIdentifier>ios-x86</RuntimeIdentifier>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <AssemblyName>MvvmCross.Platforms.iOS</AssemblyName>
+    <RootNamespace>MvvmCross.Platforms.iOS</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\MvvmCross\Platforms\Apple\**\*.cs" />
+    <Compile Include="..\MvvmCross\Platforms\Ios\**\*.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MvvmCross\MvvmCross.csproj" />
+  </ItemGroup>
+
+</Project>
