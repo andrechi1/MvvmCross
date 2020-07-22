@@ -3,6 +3,7 @@
   <PropertyGroup>
     <!--<TargetFrameworks>netstandard2.0;net5.0</TargetFrameworks>-->
     <TargetFrameworks>net5.0</TargetFrameworks>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
     <TargetPlatformVersion>10.0.18362.0</TargetPlatformVersion>
   </PropertyGroup>
 
@@ -10,6 +11,12 @@
     <AssemblyName>MvvmCross.Platforms.Visibility.WinRT</AssemblyName>
     <RootNamespace>MvvmCross.Platforms.Visibility.Uap</RootNamespace>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.WinUI">
+      <Version>3.0.0-preview2.200713.0</Version>
+    </PackageReference>
+  </ItemGroup>
 
   <ItemGroup>
     <Compile Include="..\Visibility\Platforms\Uap\**\*.cs" />

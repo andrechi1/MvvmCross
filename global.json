@@ -1,6 +1,10 @@
 {
+  //"sdk": {
+  //  "version": "3.1.302",
+  //  "rollForward": "disable"
+  //},
   "msbuild-sdks": {
-    "MSBuild.Sdk.Extras": "2.0.54",
+    "MSBuild.Sdk.Extras": "2.0.54"
     //"Microsoft.iOS.Sdk": "13.5.100-ci.main.260",
     //"Microsoft.Android.Sdk": "11.0.100-ci.master.132"
   }

@@ -3,7 +3,7 @@
   <PropertyGroup>
     <!--<TargetFramework>net5.0-ios13.0</TargetFramework>-->
     <TargetFrameworks>net5.0</TargetFrameworks>
-    <RuntimeIdentifier>ios-x86</RuntimeIdentifier>
+    <RuntimeIdentifier>ios-x64</RuntimeIdentifier>
   </PropertyGroup>
 
   <PropertyGroup>

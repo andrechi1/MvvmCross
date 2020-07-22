@@ -45,5 +45,4 @@
 
   <Import Project="XamarinForms.targets" Condition="'$(IsXamarinForms)' == 'true'"/>
 
-  <Import Condition="$(RuntimeIdentifier.StartsWith('ios'))"  Project="Directory.iOS.targets" />
 </Project>
