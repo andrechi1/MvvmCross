@@ -18,7 +18,7 @@ namespace MvvmCross.Platforms.Uap.Views
 {
     public abstract class MvxApplication : Application
     {
-        protected IActivatedEventArgs ActivationArguments { get; private set; }
+        //protected IActivatedEventArgs ActivationArguments { get; private set; }
 
         protected Frame RootFrame { get; set; }
 
@@ -39,22 +39,23 @@ namespace MvvmCross.Platforms.Uap.Views
         protected override void OnLaunched(Microsoft.UI.Xaml.LaunchActivatedEventArgs activationArgs)
         {
             base.OnLaunched(activationArgs);
-            ActivationArguments = activationArgs.UWPLaunchActivatedEventArgs;
+            //ActivationArguments = activationArgs.UWPLaunchActivatedEventArgs;
 
-            var rootFrame = InitializeFrame(ActivationArguments);
+            // ToDo: Review. UWPLaunchActivatedEventArgs lauch a exception with Microsoft.WinUI 3.0.0-preview2.200713.0
+            var rootFrame = InitializeFrame(null /*activationArgs.UWPLaunchActivatedEventArgs*/);
 
-            if (activationArgs.UWPLaunchActivatedEventArgs.PrelaunchActivated == false)
-            {
-                RunAppStart(ActivationArguments);
-            }
+            //if (activationArgs.UWPLaunchActivatedEventArgs.PrelaunchActivated == false)
+            //{
+                RunAppStart(null/*activationArgs.UWPLaunchActivatedEventArgs*/);
+            //}
 
-            Window.Current.Activate();
+            //Window.Current.Activate();
         }
 
         protected override void OnActivated(IActivatedEventArgs activationArgs)
         {
             base.OnActivated(activationArgs);
-            ActivationArguments = activationArgs;
+            //ActivationArguments = activationArgs;
 
             var rootFrame = InitializeFrame(activationArgs);
             RunAppStart(activationArgs);
@@ -64,7 +65,7 @@ namespace MvvmCross.Platforms.Uap.Views
 
         protected virtual void RunAppStart(IActivatedEventArgs activationArgs)
         {
-            var instance = MvxWindowsSetupSingleton.EnsureSingletonAvailable(RootFrame, ActivationArguments, nameof(Suspend));
+            var instance = MvxWindowsSetupSingleton.EnsureSingletonAvailable(RootFrame, activationArgs, nameof(Suspend));
             if (RootFrame.Content == null)
             {
                 instance.EnsureInitialized();
@@ -87,7 +88,7 @@ namespace MvvmCross.Platforms.Uap.Views
 
         protected virtual Frame InitializeFrame(IActivatedEventArgs activationArgs)
         {
-            var rootFrame = Window.Current.Content as Frame;
+            var rootFrame = Window.Current?.Content as Frame;
 
             if (rootFrame == null)
             {
@@ -97,10 +98,11 @@ namespace MvvmCross.Platforms.Uap.Views
                 Window.Current.Content = rootFrame;
             }
 
-            if (activationArgs.PreviousExecutionState == ApplicationExecutionState.Terminated)
-            {
-                OnResumeFromTerminateState();
-            }
+            //ToDo: Review.UWPLaunchActivatedEventArgs lauch a exception with Microsoft.WinUI 3.0.0 - preview2.200713.0
+            //if (activationArgs.PreviousExecutionState == ApplicationExecutionState.Terminated)
+            //{
+            //    OnResumeFromTerminateState();
+            //}
 
             RootFrame = rootFrame;
 
